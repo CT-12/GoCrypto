@@ -1,6 +1,8 @@
 package cmd
 
 import (
+	"fmt"
+
 	"github.com/CT-12/Go-Crypto/utils/crypto"
 	"github.com/CT-12/Go-Crypto/utils/file_manager"
 	"github.com/spf13/cobra"
@@ -17,16 +19,19 @@ var encryptCmd = &cobra.Command{
 	Use:  "encrypt",
 	Short: "Encrypt a text",
 	Run: func(cmd *cobra.Command, args []string) {
+		fmt.Println("[INFO] Reading file from: ", plain_file_read_path)
 		plain_text, err := file_manager.ReadFile(plain_file_read_path)
 		if err != nil{
 			panic(err)
 		}
 
+		fmt.Println("[INFO] Encrypting text...")
 		result, err := crypto.EncryptAES(plain_text, encrypt_key)
 		if err != nil{
 			panic(err)
 		}
 
+		fmt.Println("[INFO] Writing encrypted text to: ", encrypted_file_output_path)
 		file_manager.WriteFile(encrypted_file_output_path, result)
 	},
 }
