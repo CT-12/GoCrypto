@@ -4,8 +4,8 @@
 
 ```shell
 Usage:
-  Go-Crypto [flags]
-  Go-Crypto [command]
+  GoCrypto [flags]
+  GoCrypto [command]
 
 Available Commands:
   completion  Generate the autocompletion script for the specified shell
@@ -26,7 +26,7 @@ Use "Go-Crypto [command] --help" for more information about a command.
 Encrypt a text
 
 Usage:
-  Go-Crypto encrypt [flags]
+  GoCrypto encrypt [flags]
 
 Flags:
   -h, --help            help for encrypt
@@ -41,7 +41,7 @@ Flags:
 Decrypt a text
 
 Usage:
-  Go-Crypto decrypt [flags]
+  GoCrypto decrypt [flags]
 
 Flags:
   -h, --help            help for decrypt
