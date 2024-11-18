@@ -1,4 +1,4 @@
-# Crypto
+# GoCrypto
 
 ## Usage
 
